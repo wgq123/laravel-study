@@ -115,6 +115,9 @@ return [
                 'model'  => Encore\Admin\Auth\Database\Administrator::class,
             ],
         ],
+        'excepts'=>[
+            'auth/login'
+        ],
     ],
 
     /*
