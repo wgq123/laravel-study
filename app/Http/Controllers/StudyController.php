@@ -40,11 +40,10 @@ class StudyController extends Controller
         $f = function ($v){return (array)$v;};
         $user = DB::table('admin_menu')->get()->map($f)->toArray();
 //        $user = DB::table('admin_menu')->get()->toArray();
-        $this->validateWith();
+        echo "<pre />"; print_r($user);die;
 
 
 
-//        该get方法返回一个Illuminate\Support\Collection包含查询结果的实例，其中每个结果都是 PHPstdClass对象的一个​​实例
 
         /********************************* 原生sql  **********************************/
 
