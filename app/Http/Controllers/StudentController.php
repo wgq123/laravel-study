@@ -204,5 +204,17 @@ class StudentController extends Controller
     }
 
 
+    public  function section1(){
+
+        $data['name'] = 'wgq';
+        $data['arr'] = ['zhangsan', 'lisi'];
+        return view('student.section1', $data);
+    }
+
+    public function urlTest(){
+
+        return 'urlTest';
+    }
+
 
 }
