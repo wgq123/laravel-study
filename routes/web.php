@@ -17,6 +17,15 @@ Route::get('/study', 'StudyController@index');
 //Route::get('/member/info', 'MemberController@info');
 Route::get('/member/info/{id}', ['uses'=>'MemberController@info']);
 
+Route::get('test1', 'StudentController@test1');
+Route::get('test2', 'StudentController@test2');
+Route::get('query4', 'StudentController@query4');
+Route::get('query5', 'StudentController@query5');
+Route::get('orm1', 'StudentController@orm1');
+Route::get('orm2', 'StudentController@orm2');
+Route::get('orm3', 'StudentController@orm3');
+Route::get('orm4', 'StudentController@orm4');
+
 //参考链接：https://www.imooc.com/video/12495
 /******** 基础路由 *********/
 //测试get请求
