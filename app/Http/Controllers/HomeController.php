@@ -23,4 +23,8 @@ class HomeController extends Controller
     {
         return view('about');
     }
+
+    public function test(){
+        dump(11);
+    }
 }

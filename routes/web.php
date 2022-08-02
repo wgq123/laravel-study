@@ -11,12 +11,17 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'HomeController@index');
+Route::get('/test', 'HomeController@test');
 Route::get('/about', 'HomeController@about');
 Route::get('/study', 'StudyController@index');
+Route::get('/study/test', 'StudyController@test');
 //Route::get('/member/info', 'MemberController@info');
 Route::get('/member/info/{id}', ['uses'=>'MemberController@info']);
 
+Route::get('test', 'StudyController@test');
 Route::get('test1', 'StudentController@test1');
 Route::get('test2', 'StudentController@test2');
 Route::get('query4', 'StudentController@query4');

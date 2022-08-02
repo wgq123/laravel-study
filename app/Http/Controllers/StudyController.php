@@ -69,5 +69,17 @@ class StudyController extends Controller
 //        echo "<pre />"; print_r($deleted);die; //成功返回1 ，失败返回0
     }
 
+    public function test(){
+        dump(12);
+        $data = DB::select('select * from user where id = ?', [1]);
+        dump($data);
+    }
+
+    public function test1(){
+        dump(22);exit;
+        //$data = DB::select('select * from user where id = ?', [1]);
+        //dump($data);
+    }
+
 
 }
