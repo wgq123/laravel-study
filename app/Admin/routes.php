@@ -2,16 +2,15 @@
 
 use Illuminate\Routing\Router;
 
-Admin::registerAuthRoutes();
+Admin::routes();
 
 Route::group([
     'prefix'        => config('admin.route.prefix'),
     'namespace'     => config('admin.route.namespace'),
     'middleware'    => config('admin.route.middleware'),
+    'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index');
-    $router->resource('categories', CategoryController::class);
-    $router->resource('sites', SiteController::class);
-    $router->resource('setting', SettingController::class);
+    $router->get('/', 'HomeController@index')->name('home');
+
 });
